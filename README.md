@@ -4,7 +4,7 @@ A template for a simple publishable TypeScript library.
 
 # How to create it from scratch
 
-## Create project:
+## Create the project:
 
 ```sh
 mkdir aux
@@ -32,7 +32,7 @@ npx tsc --init
 	"author": "Your Name",
 	"license": "MIT",
 	"devDependencies": {
-		// or whatever is already in this file
+		// or whatever versions are already in this file
 		"tsup": "^8.5.0",
 		"typescript": "^5.9.3"
 	}
@@ -74,10 +74,10 @@ aux/
 │   ├── euclid.ts
 │   └── index.ts
 ├── package.json
-├── tsconfig.json
+└── tsconfig.json
 ```
 
-`index.ts`:
+## `index.ts`:
 
 ```ts
 export * as Poetry from './poetry';
@@ -97,17 +97,17 @@ dist/
 ├── index.js
 ├── index.mjs
 ├── index.d.ts
-├── index.d.mts
+└── index.d.mts
 ```
 
-## Using the library:
+## Using the library in a TypeScript project:
 
 ```ts
 import { Poetry, Euclid } from 'aux';
 
-console.log(Poetry.capitalise('hello')); // "Hello"
-console.log(Poetry.splitWords('a quick fox')); // ["a", "quick", "fox"]
-console.log(Euclid.triangleArea(10, 5)); // 25
+console.log(Poetry.capitalise('hello'));
+console.log(Poetry.splitWords('a quick fox'));
+console.log(Euclid.triangleArea(10, 5));
 ```
 
 ## Publish the library to `npm`:
