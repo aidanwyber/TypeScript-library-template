@@ -1,0 +1,26 @@
+{
+	"name": "aux",
+	"version": "1.0.0",
+	"description": "A small utils library with poetry and math helpers",
+	"main": "dist/index.js",
+	"module": "dist/index.mjs",
+	"types": "dist/index.d.ts",
+	"scripts": {
+		"build": "tsup src/index.ts --format cjs,esm --dts"
+	},
+	"files": [
+		"dist"
+	],
+	"keywords": [
+		"utils",
+		"typescript",
+		"math",
+		"string"
+	],
+	"author": "Aidan Wyber",
+	"license": "MIT",
+	"devDependencies": {
+		"tsup": "^8.5.0",
+		"typescript": "^5.9.3"
+	}
+}
