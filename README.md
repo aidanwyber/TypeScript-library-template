@@ -100,7 +100,33 @@ dist/
 └── index.d.mts
 ```
 
-## Using the library in a TypeScript project:
+# Using the library in a TypeScript project
+
+## Option A: use it locally
+
+### Option A1: install it
+
+In the project where you want to use it:
+
+```sh
+npm install PATH/TO/PROJECT/ROOT/aux
+```
+
+### Option A2: link it
+
+In the `aux` folder:
+
+```sh
+npm link
+```
+
+In your consumer project:
+
+```sh
+npm link aux
+```
+
+### Use it normally:
 
 ```ts
 import { Poetry, Euclid } from 'aux';
@@ -110,11 +136,25 @@ console.log(Poetry.splitWords('a quick fox'));
 console.log(Euclid.triangleArea(10, 5));
 ```
 
-## Publish the library to `npm`:
+## Option B: publish it on `npm`
 
 ```sh
 npm login
 npm publish --access public
+```
+
+### Use it normally:
+
+```sh
+npm install aux
+```
+
+```ts
+import { Poetry, Euclid } from 'aux';
+
+console.log(Poetry.capitalise('hello'));
+console.log(Poetry.splitWords('a quick fox'));
+console.log(Euclid.triangleArea(10, 5));
 ```
 
 ---
