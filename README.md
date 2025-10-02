@@ -126,6 +126,9 @@ In your consumer project:
 npm link aux
 ```
 
+-   For testing before publishing, `npm install PATH/aux` is usually best.
+-   For development, `npm link` is great.
+
 ### Use it normally:
 
 ```ts
